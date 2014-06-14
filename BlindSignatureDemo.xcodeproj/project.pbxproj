@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		208642C9194CD007003A3A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642C8194CD007003A3A2C /* Foundation.framework */; };
+		208642CB194CD007003A3A2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642CA194CD007003A3A2C /* CoreGraphics.framework */; };
+		208642CD194CD007003A3A2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642CC194CD007003A3A2C /* UIKit.framework */; };
+		208642D3194CD007003A3A2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208642D1194CD007003A3A2C /* InfoPlist.strings */; };
+		208642D5194CD007003A3A2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 208642D4194CD007003A3A2C /* main.m */; };
+		208642D9194CD007003A3A2C /* BSDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 208642D8194CD007003A3A2C /* BSDAppDelegate.m */; };
+		208642DC194CD007003A3A2C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208642DA194CD007003A3A2C /* Main_iPhone.storyboard */; };
+		208642DF194CD007003A3A2C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208642DD194CD007003A3A2C /* Main_iPad.storyboard */; };
+		208642E2194CD007003A3A2C /* BSDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208642E1194CD007003A3A2C /* BSDViewController.m */; };
+		208642E4194CD007003A3A2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208642E3194CD007003A3A2C /* Images.xcassets */; };
+		208642EB194CD007003A3A2C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642EA194CD007003A3A2C /* XCTest.framework */; };
+		208642EC194CD007003A3A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642C8194CD007003A3A2C /* Foundation.framework */; };
+		208642ED194CD007003A3A2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208642CC194CD007003A3A2C /* UIKit.framework */; };
+		208642F5194CD007003A3A2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208642F3194CD007003A3A2C /* InfoPlist.strings */; };
+		208642F7194CD007003A3A2C /* BlindSignatureDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 208642F6194CD007003A3A2C /* BlindSignatureDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		208642EE194CD007003A3A2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 208642BD194CD007003A3A2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 208642C4194CD007003A3A2C;
+			remoteInfo = BlindSignatureDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		208642C5194CD007003A3A2C /* BlindSignatureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlindSignatureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		208642C8194CD007003A3A2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		208642CA194CD007003A3A2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		208642CC194CD007003A3A2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		208642D0194CD007003A3A2C /* BlindSignatureDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlindSignatureDemo-Info.plist"; sourceTree = "<group>"; };
+		208642D2194CD007003A3A2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		208642D4194CD007003A3A2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		208642D6194CD007003A3A2C /* BlindSignatureDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlindSignatureDemo-Prefix.pch"; sourceTree = "<group>"; };
+		208642D7194CD007003A3A2C /* BSDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSDAppDelegate.h; sourceTree = "<group>"; };
+		208642D8194CD007003A3A2C /* BSDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDAppDelegate.m; sourceTree = "<group>"; };
+		208642DB194CD007003A3A2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		208642DE194CD007003A3A2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		208642E0194CD007003A3A2C /* BSDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSDViewController.h; sourceTree = "<group>"; };
+		208642E1194CD007003A3A2C /* BSDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSDViewController.m; sourceTree = "<group>"; };
+		208642E3194CD007003A3A2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		208642E9194CD007003A3A2C /* BlindSignatureDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlindSignatureDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208642EA194CD007003A3A2C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		208642F2194CD007003A3A2C /* BlindSignatureDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlindSignatureDemoTests-Info.plist"; sourceTree = "<group>"; };
+		208642F4194CD007003A3A2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		208642F6194CD007003A3A2C /* BlindSignatureDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlindSignatureDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		208642C2194CD007003A3A2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642CB194CD007003A3A2C /* CoreGraphics.framework in Frameworks */,
+				208642CD194CD007003A3A2C /* UIKit.framework in Frameworks */,
+				208642C9194CD007003A3A2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208642E6194CD007003A3A2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642EB194CD007003A3A2C /* XCTest.framework in Frameworks */,
+				208642ED194CD007003A3A2C /* UIKit.framework in Frameworks */,
+				208642EC194CD007003A3A2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		208642BC194CD007003A3A2C = {
+			isa = PBXGroup;
+			children = (
+				208642CE194CD007003A3A2C /* BlindSignatureDemo */,
+				208642F0194CD007003A3A2C /* BlindSignatureDemoTests */,
+				208642C7194CD007003A3A2C /* Frameworks */,
+				208642C6194CD007003A3A2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		208642C6194CD007003A3A2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				208642C5194CD007003A3A2C /* BlindSignatureDemo.app */,
+				208642E9194CD007003A3A2C /* BlindSignatureDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		208642C7194CD007003A3A2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				208642C8194CD007003A3A2C /* Foundation.framework */,
+				208642CA194CD007003A3A2C /* CoreGraphics.framework */,
+				208642CC194CD007003A3A2C /* UIKit.framework */,
+				208642EA194CD007003A3A2C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		208642CE194CD007003A3A2C /* BlindSignatureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				208642D7194CD007003A3A2C /* BSDAppDelegate.h */,
+				208642D8194CD007003A3A2C /* BSDAppDelegate.m */,
+				208642DA194CD007003A3A2C /* Main_iPhone.storyboard */,
+				208642DD194CD007003A3A2C /* Main_iPad.storyboard */,
+				208642E0194CD007003A3A2C /* BSDViewController.h */,
+				208642E1194CD007003A3A2C /* BSDViewController.m */,
+				208642E3194CD007003A3A2C /* Images.xcassets */,
+				208642CF194CD007003A3A2C /* Supporting Files */,
+			);
+			path = BlindSignatureDemo;
+			sourceTree = "<group>";
+		};
+		208642CF194CD007003A3A2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				208642D0194CD007003A3A2C /* BlindSignatureDemo-Info.plist */,
+				208642D1194CD007003A3A2C /* InfoPlist.strings */,
+				208642D4194CD007003A3A2C /* main.m */,
+				208642D6194CD007003A3A2C /* BlindSignatureDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		208642F0194CD007003A3A2C /* BlindSignatureDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				208642F6194CD007003A3A2C /* BlindSignatureDemoTests.m */,
+				208642F1194CD007003A3A2C /* Supporting Files */,
+			);
+			path = BlindSignatureDemoTests;
+			sourceTree = "<group>";
+		};
+		208642F1194CD007003A3A2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				208642F2194CD007003A3A2C /* BlindSignatureDemoTests-Info.plist */,
+				208642F3194CD007003A3A2C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		208642C4194CD007003A3A2C /* BlindSignatureDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 208642FA194CD007003A3A2C /* Build configuration list for PBXNativeTarget "BlindSignatureDemo" */;
+			buildPhases = (
+				208642C1194CD007003A3A2C /* Sources */,
+				208642C2194CD007003A3A2C /* Frameworks */,
+				208642C3194CD007003A3A2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlindSignatureDemo;
+			productName = BlindSignatureDemo;
+			productReference = 208642C5194CD007003A3A2C /* BlindSignatureDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		208642E8194CD007003A3A2C /* BlindSignatureDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 208642FD194CD007003A3A2C /* Build configuration list for PBXNativeTarget "BlindSignatureDemoTests" */;
+			buildPhases = (
+				208642E5194CD007003A3A2C /* Sources */,
+				208642E6194CD007003A3A2C /* Frameworks */,
+				208642E7194CD007003A3A2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				208642EF194CD007003A3A2C /* PBXTargetDependency */,
+			);
+			name = BlindSignatureDemoTests;
+			productName = BlindSignatureDemoTests;
+			productReference = 208642E9194CD007003A3A2C /* BlindSignatureDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		208642BD194CD007003A3A2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BSD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Oleg Andreev";
+				TargetAttributes = {
+					208642E8194CD007003A3A2C = {
+						TestTargetID = 208642C4194CD007003A3A2C;
+					};
+				};
+			};
+			buildConfigurationList = 208642C0194CD007003A3A2C /* Build configuration list for PBXProject "BlindSignatureDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 208642BC194CD007003A3A2C;
+			productRefGroup = 208642C6194CD007003A3A2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				208642C4194CD007003A3A2C /* BlindSignatureDemo */,
+				208642E8194CD007003A3A2C /* BlindSignatureDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		208642C3194CD007003A3A2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642DF194CD007003A3A2C /* Main_iPad.storyboard in Resources */,
+				208642E4194CD007003A3A2C /* Images.xcassets in Resources */,
+				208642DC194CD007003A3A2C /* Main_iPhone.storyboard in Resources */,
+				208642D3194CD007003A3A2C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208642E7194CD007003A3A2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642F5194CD007003A3A2C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		208642C1194CD007003A3A2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642E2194CD007003A3A2C /* BSDViewController.m in Sources */,
+				208642D9194CD007003A3A2C /* BSDAppDelegate.m in Sources */,
+				208642D5194CD007003A3A2C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208642E5194CD007003A3A2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208642F7194CD007003A3A2C /* BlindSignatureDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		208642EF194CD007003A3A2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 208642C4194CD007003A3A2C /* BlindSignatureDemo */;
+			targetProxy = 208642EE194CD007003A3A2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		208642D1194CD007003A3A2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208642D2194CD007003A3A2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		208642DA194CD007003A3A2C /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208642DB194CD007003A3A2C /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		208642DD194CD007003A3A2C /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208642DE194CD007003A3A2C /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		208642F3194CD007003A3A2C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208642F4194CD007003A3A2C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		208642F8194CD007003A3A2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		208642F9194CD007003A3A2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		208642FB194CD007003A3A2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlindSignatureDemo/BlindSignatureDemo-Prefix.pch";
+				INFOPLIST_FILE = "BlindSignatureDemo/BlindSignatureDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		208642FC194CD007003A3A2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlindSignatureDemo/BlindSignatureDemo-Prefix.pch";
+				INFOPLIST_FILE = "BlindSignatureDemo/BlindSignatureDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		208642FE194CD007003A3A2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlindSignatureDemo.app/BlindSignatureDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlindSignatureDemo/BlindSignatureDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BlindSignatureDemoTests/BlindSignatureDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		208642FF194CD007003A3A2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlindSignatureDemo.app/BlindSignatureDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlindSignatureDemo/BlindSignatureDemo-Prefix.pch";
+				INFOPLIST_FILE = "BlindSignatureDemoTests/BlindSignatureDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		208642C0194CD007003A3A2C /* Build configuration list for PBXProject "BlindSignatureDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208642F8194CD007003A3A2C /* Debug */,
+				208642F9194CD007003A3A2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		208642FA194CD007003A3A2C /* Build configuration list for PBXNativeTarget "BlindSignatureDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208642FB194CD007003A3A2C /* Debug */,
+				208642FC194CD007003A3A2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		208642FD194CD007003A3A2C /* Build configuration list for PBXNativeTarget "BlindSignatureDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208642FE194CD007003A3A2C /* Debug */,
+				208642FF194CD007003A3A2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 208642BD194CD007003A3A2C /* Project object */;
+}
