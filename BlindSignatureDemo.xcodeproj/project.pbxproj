@@ -35,6 +35,16 @@
 		20864314194D00EB003A3A2C /* BSDFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864311194D00EB003A3A2C /* BSDFriendViewController.m */; };
 		20864315194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864312194D00EB003A3A2C /* BSDFriendViewController.xib */; };
 		20864316194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864312194D00EB003A3A2C /* BSDFriendViewController.xib */; };
+		2086431A194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864318194D0E3A003A3A2C /* BSDSelectFriendsViewController.m */; };
+		2086431B194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864318194D0E3A003A3A2C /* BSDSelectFriendsViewController.m */; };
+		2086431C194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864319194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib */; };
+		2086431D194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864319194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib */; };
+		20864321194D0FED003A3A2C /* BSDLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2086431F194D0FED003A3A2C /* BSDLockViewController.m */; };
+		20864322194D0FED003A3A2C /* BSDLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2086431F194D0FED003A3A2C /* BSDLockViewController.m */; };
+		20864323194D0FED003A3A2C /* BSDLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864320194D0FED003A3A2C /* BSDLockViewController.xib */; };
+		20864324194D0FED003A3A2C /* BSDLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864320194D0FED003A3A2C /* BSDLockViewController.xib */; };
+		20864327194D12C4003A3A2C /* BSDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864326194D12C4003A3A2C /* BSDTransaction.m */; };
+		20864328194D12C4003A3A2C /* BSDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864326194D12C4003A3A2C /* BSDTransaction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +89,14 @@
 		20864310194D00EB003A3A2C /* BSDFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDFriendViewController.h; sourceTree = "<group>"; };
 		20864311194D00EB003A3A2C /* BSDFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDFriendViewController.m; sourceTree = "<group>"; };
 		20864312194D00EB003A3A2C /* BSDFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDFriendViewController.xib; sourceTree = "<group>"; };
+		20864317194D0E3A003A3A2C /* BSDSelectFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDSelectFriendsViewController.h; sourceTree = "<group>"; };
+		20864318194D0E3A003A3A2C /* BSDSelectFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDSelectFriendsViewController.m; sourceTree = "<group>"; };
+		20864319194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDSelectFriendsViewController.xib; sourceTree = "<group>"; };
+		2086431E194D0FED003A3A2C /* BSDLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDLockViewController.h; sourceTree = "<group>"; };
+		2086431F194D0FED003A3A2C /* BSDLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDLockViewController.m; sourceTree = "<group>"; };
+		20864320194D0FED003A3A2C /* BSDLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDLockViewController.xib; sourceTree = "<group>"; };
+		20864325194D12C4003A3A2C /* BSDTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDTransaction.h; sourceTree = "<group>"; };
+		20864326194D12C4003A3A2C /* BSDTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDTransaction.m; sourceTree = "<group>"; };
 		99E5CA36A0C3400F80871650 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D4B022D1051846009A3A32B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -148,6 +166,8 @@
 				20864302194CD7E5003A3A2C /* BSDStorage.m */,
 				20864305194CD9B7003A3A2C /* BSDPerson.h */,
 				20864306194CD9B7003A3A2C /* BSDPerson.m */,
+				20864325194D12C4003A3A2C /* BSDTransaction.h */,
+				20864326194D12C4003A3A2C /* BSDTransaction.m */,
 				208642D7194CD007003A3A2C /* BSDAppDelegate.h */,
 				208642D8194CD007003A3A2C /* BSDAppDelegate.m */,
 				208642E0194CD007003A3A2C /* BSDViewController.h */,
@@ -158,6 +178,12 @@
 				20864310194D00EB003A3A2C /* BSDFriendViewController.h */,
 				20864311194D00EB003A3A2C /* BSDFriendViewController.m */,
 				20864312194D00EB003A3A2C /* BSDFriendViewController.xib */,
+				20864317194D0E3A003A3A2C /* BSDSelectFriendsViewController.h */,
+				20864318194D0E3A003A3A2C /* BSDSelectFriendsViewController.m */,
+				20864319194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib */,
+				2086431E194D0FED003A3A2C /* BSDLockViewController.h */,
+				2086431F194D0FED003A3A2C /* BSDLockViewController.m */,
+				20864320194D0FED003A3A2C /* BSDLockViewController.xib */,
 				208642DA194CD007003A3A2C /* Main_iPhone.storyboard */,
 				208642DD194CD007003A3A2C /* Main_iPad.storyboard */,
 				208642E3194CD007003A3A2C /* Images.xcassets */,
@@ -277,6 +303,8 @@
 				20864315194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */,
 				208642DF194CD007003A3A2C /* Main_iPad.storyboard in Resources */,
 				2086430E194CFF31003A3A2C /* BSDFriendsViewController.xib in Resources */,
+				20864323194D0FED003A3A2C /* BSDLockViewController.xib in Resources */,
+				2086431C194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */,
 				208642E4194CD007003A3A2C /* Images.xcassets in Resources */,
 				208642DC194CD007003A3A2C /* Main_iPhone.storyboard in Resources */,
 				208642D3194CD007003A3A2C /* InfoPlist.strings in Resources */,
@@ -289,6 +317,8 @@
 			files = (
 				20864316194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */,
 				2086430F194CFF31003A3A2C /* BSDFriendsViewController.xib in Resources */,
+				20864324194D0FED003A3A2C /* BSDLockViewController.xib in Resources */,
+				2086431D194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */,
 				208642F5194CD007003A3A2C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +367,10 @@
 				2086430C194CFF31003A3A2C /* BSDFriendsViewController.m in Sources */,
 				208642E2194CD007003A3A2C /* BSDViewController.m in Sources */,
 				20864303194CD7E5003A3A2C /* BSDStorage.m in Sources */,
+				20864327194D12C4003A3A2C /* BSDTransaction.m in Sources */,
+				2086431A194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */,
 				20864307194CD9B7003A3A2C /* BSDPerson.m in Sources */,
+				20864321194D0FED003A3A2C /* BSDLockViewController.m in Sources */,
 				208642D9194CD007003A3A2C /* BSDAppDelegate.m in Sources */,
 				208642D5194CD007003A3A2C /* main.m in Sources */,
 			);
@@ -348,7 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20864314194D00EB003A3A2C /* BSDFriendViewController.m in Sources */,
+				20864322194D0FED003A3A2C /* BSDLockViewController.m in Sources */,
+				20864328194D12C4003A3A2C /* BSDTransaction.m in Sources */,
 				2086430D194CFF31003A3A2C /* BSDFriendsViewController.m in Sources */,
+				2086431B194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */,
 				208642F7194CD007003A3A2C /* BlindSignatureDemoTests.m in Sources */,
 				20864304194CD7E5003A3A2C /* BSDStorage.m in Sources */,
 				20864308194CD9B7003A3A2C /* BSDPerson.m in Sources */,

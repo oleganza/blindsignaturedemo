@@ -21,5 +21,6 @@
 - (BTCKeychain*) myKeychain;
 - (BTCKeychain*) theirKeychain;
 
++ (NSArray*) peopleFromPlist:(NSArray*)plist;
 
 @end

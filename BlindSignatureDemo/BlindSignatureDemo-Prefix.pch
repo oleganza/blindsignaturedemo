@@ -17,4 +17,5 @@
 
     #import "BSDStorage.h"
     #import "BSDPerson.h"
+    #import "BSDTransaction.h"
 #endif

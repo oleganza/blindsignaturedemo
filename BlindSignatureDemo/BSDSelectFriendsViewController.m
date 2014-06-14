@@ -1,21 +1,23 @@
 //
-//  BSDFriendsViewController.m
+//  BSDSelectFriendsViewController.m
 //  BlindSignatureDemo
 //
 //  Created by Oleg Andreev on 15.06.2014.
 //  Copyright (c) 2014 Oleg Andreev. All rights reserved.
 //
 
-#import "BSDFriendsViewController.h"
-#import "BSDFriendViewController.h"
+#import "BSDSelectFriendsViewController.h"
+#import "BSDLockViewController.h"
 
-@interface BSDFriendsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface BSDSelectFriendsViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
-@implementation BSDFriendsViewController {
-    NSArray* _friends;
+@implementation BSDSelectFriendsViewController {
+        NSArray* _friends;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,14 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Friends";
+    self.title = @"Select Friend";
     // Do any additional setup after loading the view from its nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -48,14 +44,6 @@
     _friends = [[BSDStorage sharedStorage] loadFriends];
     [self.tableView reloadData];
 }
-
-- (IBAction)addFriend:(id)sender
-{
-    BSDPerson* friend = [[BSDStorage sharedStorage] addFriend];
-    
-    [self openFriend:friend];
-}
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -85,11 +73,11 @@
 
 - (void) openFriend:(BSDPerson*)person
 {
-    BSDFriendViewController* fvc = [[BSDFriendViewController alloc] initWithNibName:nil bundle:nil];
+    BSDLockViewController* vc = [[BSDLockViewController alloc] initWithNibName:nil bundle:nil];
     
-    fvc.friend = person;
+    vc.friends = @[ person ];
     
-    [self.navigationController pushViewController:fvc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

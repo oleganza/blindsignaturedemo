@@ -8,6 +8,7 @@
 
 #import "BSDViewController.h"
 #import "BSDFriendsViewController.h"
+#import "BSDSelectFriendsViewController.h"
 
 @interface BSDViewController ()
 
@@ -33,7 +34,10 @@
     [self.navigationController pushViewController:fvc animated:YES];
 }
 
-- (IBAction)lockFunds:(id)sender {
+- (IBAction)lockFunds:(id)sender
+{
+    BSDSelectFriendsViewController* fvc = [[BSDSelectFriendsViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:fvc animated:YES];
     
 }
 

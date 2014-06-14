@@ -28,8 +28,7 @@
 {
     if (self = [super init])
     {
-        // TODO: load or generate a seed.
-        // This should be in keychain, obviously and not in defaults. But for demo we can be quick and dirty.
+        // FIXME: This should be in keychain, obviously and not in defaults. But for hackathon demo we can be quick and dirty.
         NSData* seed = [[NSUserDefaults standardUserDefaults] dataForKey:@"seed"];
         if (!seed)
         {
@@ -42,6 +41,18 @@
     return self;
 }
 
+// Keypairs for friends are derived from here, per friend.
+- (BTCKeychain*) friendsKeychain
+{
+    return [_keychain derivedKeychainAtIndex:0 hardened:YES];
+}
+
+// Random numbers for transactions are derived from here, per transaction.
+- (BTCKeychain*) transactionsKeychain
+{
+    return [_keychain derivedKeychainAtIndex:1 hardened:YES];
+}
+
 - (NSArray*) friends
 {
     if (_friends) return _friends;
@@ -52,16 +63,10 @@
 - (NSArray*) loadFriends
 {
     NSArray* plists = [[NSUserDefaults standardUserDefaults] objectForKey:@"friends"];
-    NSMutableArray* arr = [NSMutableArray array];
     
-    for (id plist in plists)
-    {
-        [arr addObject:[[BSDPerson alloc] initWithPlist:plist]];
-    }
+    _friends = [BSDPerson peopleFromPlist:plists];
     
-    _friends = arr;
-    
-    return arr;
+    return _friends;
 }
 
 - (void) saveFriends
@@ -71,6 +76,7 @@
 
 - (void) saveFriends:(NSArray*)friends
 {
+    // FIXME: This should be in keychain, obviously and not in defaults. But for hackathon demo we can be quick and dirty.
     id plist = [friends valueForKey:@"plist"];
     [[NSUserDefaults standardUserDefaults] setObject:plist forKey:@"friends"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -88,7 +94,7 @@
     
     friends = [friends arrayByAddingObject:person];
     
-    BTCKeychain* keychain = [_keychain derivedKeychainAtIndex:i hardened:YES];
+    BTCKeychain* keychain = [[self friendsKeychain] derivedKeychainAtIndex:i hardened:YES];
     
     NSData* extPrivKey = [keychain extendedPrivateKey];
     person.myExtendedPrivateKey = BTCBase58CheckStringWithData(extPrivKey);
@@ -98,6 +104,45 @@
     _friends = friends;
     
     return person;
+}
+
+- (BSDTransaction*) addTransactionForFriends:(NSArray*)friends minSignatures:(int)minSigs
+{
+    if (friends.count == 0) return nil;
+    if (minSigs < 1) return nil;
+    
+    // Check that every friend has a public key.
+    for (BSDPerson* person in friends)
+    {
+        if (!person.theirKeychain.rootKey || person.theirKeychain.isPrivate)
+        {
+            return nil;
+        }
+    }
+    
+    NSArray* txs = [[NSUserDefaults standardUserDefaults] objectForKey:@"txs"];
+    
+    BSDTransaction* tx = [[BSDTransaction alloc] init];
+    
+    tx.index = txs.count;
+    tx.label = @"";
+    tx.friends = friends;
+    
+    // Two cases:
+    // 1. one friend - normal pubkey address.
+    // 2. many friends - multisig script wrapped in a P2SH address.
+    
+    if (friends.count == 1)
+    {
+        // Normal address
+        
+    }
+    else
+    {
+        // MULTISIG
+    }
+    
+    return tx;
 }
 
 

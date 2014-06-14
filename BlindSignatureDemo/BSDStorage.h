@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class BSDPerson;
+@class BSDTransaction;
 @interface BSDStorage : NSObject
 
 + (instancetype) sharedStorage;
@@ -24,5 +25,14 @@
 
 // Adds new person, saves it and returns to the caller.
 - (BSDPerson*) addFriend;
+
+// Keypairs for friends are derived from here, per friend.
+- (BTCKeychain*) friendsKeychain;
+
+// Random numbers for transactions are derived from here, per transaction.
+- (BTCKeychain*) transactionsKeychain;
+
+- (BSDTransaction*) addTransactionForFriends:(NSArray*)friends minSignatures:(int)minSigs;
+
 
 @end

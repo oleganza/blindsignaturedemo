@@ -51,6 +51,18 @@
     return [[BTCKeychain alloc] initWithExtendedKey:extkey];
 }
 
++ (NSArray*) peopleFromPlist:(NSArray *)plist
+{
+    NSMutableArray* arr = [NSMutableArray array];
+    
+    for (id dict in plist)
+    {
+        [arr addObject:[[BSDPerson alloc] initWithPlist:dict]];
+    }
+    
+    return arr;
+}
+
 
 
 @end
