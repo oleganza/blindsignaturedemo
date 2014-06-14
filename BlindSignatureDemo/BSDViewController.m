@@ -7,6 +7,7 @@
 //
 
 #import "BSDViewController.h"
+#import "BSDFriendsViewController.h"
 
 @interface BSDViewController ()
 
@@ -25,5 +26,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)openFriends:(id)sender {
+    BSDFriendsViewController* fvc = [[BSDFriendsViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:fvc animated:YES];
+}
+
+- (IBAction)lockFunds:(id)sender {
+    
+}
+
+- (IBAction)unlockFunds:(id)sender {
+    
+}
+
 
 @end
