@@ -7,6 +7,7 @@
 //
 
 #import "BSDFriendViewController.h"
+#import "BSDSignViewController.h"
 
 @interface BSDFriendViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -21,6 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Friend";
     }
     return self;
 }
@@ -89,5 +91,14 @@
     
     return NO;
 }
+
+- (IBAction)sign:(id)sender
+{
+    BSDSignViewController* vc = [[BSDSignViewController alloc] initWithNibName:nil bundle:nil];
+    vc.friend = self.friend;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 @end

@@ -18,6 +18,7 @@
 
 @implementation BSDSelectFriendsViewController {
         NSArray* _friends;
+        NSMutableArray* _selectedFriends;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -25,6 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Continue" style:UIBarButtonItemStylePlain target:self action:@selector(next:)];
     }
     return self;
 }
@@ -32,7 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Select Friend";
+    self.title = @"Select Friends";
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -63,19 +65,41 @@
         cell.textLabel.text = [NSString stringWithFormat:@"%@ (no pubkey)", cell.textLabel.text];
     }
     
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
+    if ([_selectedFriends containsObject:friend])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self openFriend:_friends[indexPath.row]];
+    BSDPerson* person = _friends[indexPath.row];
+    
+    if ([_selectedFriends containsObject:person])
+    {
+        [_selectedFriends removeObject:person];
+    }
+    else
+    {
+        _selectedFriends = _selectedFriends ?: [NSMutableArray array];
+        [_selectedFriends addObject:person];
+    }
+    
+    [self.tableView reloadData];
 }
 
-- (void) openFriend:(BSDPerson*)person
+- (void) next:(id)_
 {
+    if (_selectedFriends.count == 0) return;
+    
     BSDLockViewController* vc = [[BSDLockViewController alloc] initWithNibName:nil bundle:nil];
     
-    vc.friends = @[ person ];
+    vc.friends = _selectedFriends;
     
     [self.navigationController pushViewController:vc animated:YES];
 }

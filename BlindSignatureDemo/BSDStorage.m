@@ -32,7 +32,7 @@
         NSData* seed = [[NSUserDefaults standardUserDefaults] dataForKey:@"seed"];
         if (!seed)
         {
-            seed = BTCRandomDataWithLength(256);
+            seed = BTCRandomDataWithLength(32);
             [[NSUserDefaults standardUserDefaults] setObject:seed forKey:@"seed"];
         }
         
@@ -117,6 +117,8 @@
 {
     if (friends.count == 0) return nil;
     if (minSigs < 1) return nil;
+    if (minSigs > friends.count) return nil;
+    if (friends.count > 16) return nil; // single OP_CHECKMULTISIG supports up to OP_16 as count.
     
     // Check that every friend has a public key.
     for (BSDPerson* person in friends)
@@ -150,14 +152,39 @@
         
         BTCKey* pubkey = [api publicKeyAtIndex:tx.index];
         
-        tx.address = pubkey.publicKeyAddress.base58String;
         tx.scriptData = [pubkey.publicKey copy];
-        
+        tx.address = pubkey.publicKeyAddress.base58String;
     }
     else
     {
         // MULTISIG version.
         
+        // Example script:
+        // 1
+        // 026f2bfb1a005209a722cadd75d9397372b4fee628b410720297e29493bcece43a
+        // 02dd56e02973ec075e555b898e26cf67908b15881a0d6798596f84baf71311106f
+        // 2
+        // OP_CHECKMULTISIG
+        BTCScript* script = [[BTCScript alloc] init];
+        
+        [script appendOpcode:MIN(OP_16, MAX(OP_1, OP_1 + minSigs - 1))];
+        
+        for (BSDPerson* person in friends)
+        {
+            BTCBlindSignature* api = [[BTCBlindSignature alloc] initWithClientKeychain:[[BSDStorage sharedStorage] transactionsKeychain]
+                                                                     custodianKeychain:person.theirKeychain];
+            
+            BTCKey* pubkey = [api publicKeyAtIndex:tx.index];
+            [script appendData:pubkey.publicKey];
+        }
+        
+        [script appendOpcode:MIN(OP_16, MAX(OP_1, OP_1 + friends.count - 1))];
+        
+        [script appendOpcode:OP_CHECKMULTISIG];
+        
+        tx.scriptData = script.data;
+        
+        tx.address = [BTCScriptHashAddress addressWithData:BTCHash160(tx.scriptData)].base58String;
     }
     
     txs = [(txs ?: @[]) arrayByAddingObject:tx];

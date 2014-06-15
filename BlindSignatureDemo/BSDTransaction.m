@@ -25,6 +25,7 @@
         self.address = dict[@"address"];
         self.scriptData = dict[@"scriptData"];
         self.friends = [BSDPerson peopleFromPlist:dict[@"friends"]];
+        self.minSignatures = MAX(1, [dict[@"minSignatures"] intValue]);
     }
     return self;
 }
@@ -36,8 +37,23 @@
              @"label": self.label ?: @"",
              @"address": self.address ?: @"",
              @"scriptData": self.scriptData ?: [NSData data],
+             @"minSignatures": @(self.minSignatures),
              @"friends": [self.friends valueForKey:@"plist"],
              };
+}
+
+- (NSString*) title
+{
+    NSString* keysInfo = nil;
+    if (self.friends.count == 1)
+    {
+        keysInfo = @"1 key";
+    }
+    else
+    {
+        keysInfo = [NSString stringWithFormat:@"%d-of-%d", self.minSignatures, self.friends.count];
+    }
+    return [NSString stringWithFormat:@"%d) %@... (%@)", self.index, [self.address substringToIndex:6], keysInfo];
 }
 
 + (NSArray*) txsFromPlist:(NSArray *)plist

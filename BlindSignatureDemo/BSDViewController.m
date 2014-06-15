@@ -9,6 +9,7 @@
 #import "BSDViewController.h"
 #import "BSDFriendsViewController.h"
 #import "BSDSelectFriendsViewController.h"
+#import "BSDUnlockViewController.h"
 
 @interface BSDViewController ()
 
@@ -20,7 +21,7 @@
 {
     [super viewDidLoad];
     
-	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"The Ultimate Vault";
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +43,10 @@
     
 }
 
-- (IBAction)unlockFunds:(id)sender {
+- (IBAction)unlockFunds:(id)sender
+{
+    BSDUnlockViewController* fvc = [[BSDUnlockViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:fvc animated:YES];
     
 }
 

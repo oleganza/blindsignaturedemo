@@ -45,6 +45,18 @@
 		20864324194D0FED003A3A2C /* BSDLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864320194D0FED003A3A2C /* BSDLockViewController.xib */; };
 		20864327194D12C4003A3A2C /* BSDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864326194D12C4003A3A2C /* BSDTransaction.m */; };
 		20864328194D12C4003A3A2C /* BSDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864326194D12C4003A3A2C /* BSDTransaction.m */; };
+		2086432C194D20B8003A3A2C /* BSDUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2086432A194D20B8003A3A2C /* BSDUnlockViewController.m */; };
+		2086432D194D20B8003A3A2C /* BSDUnlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2086432A194D20B8003A3A2C /* BSDUnlockViewController.m */; };
+		2086432E194D20B8003A3A2C /* BSDUnlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2086432B194D20B8003A3A2C /* BSDUnlockViewController.xib */; };
+		2086432F194D20B8003A3A2C /* BSDUnlockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2086432B194D20B8003A3A2C /* BSDUnlockViewController.xib */; };
+		20864333194D2BCC003A3A2C /* BSDRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864331194D2BCC003A3A2C /* BSDRedeemViewController.m */; };
+		20864334194D2BCC003A3A2C /* BSDRedeemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864331194D2BCC003A3A2C /* BSDRedeemViewController.m */; };
+		20864335194D2BCC003A3A2C /* BSDRedeemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864332194D2BCC003A3A2C /* BSDRedeemViewController.xib */; };
+		20864336194D2BCC003A3A2C /* BSDRedeemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864332194D2BCC003A3A2C /* BSDRedeemViewController.xib */; };
+		2086433A194D3F2C003A3A2C /* BSDSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864338194D3F2C003A3A2C /* BSDSignViewController.m */; };
+		2086433B194D3F2C003A3A2C /* BSDSignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20864338194D3F2C003A3A2C /* BSDSignViewController.m */; };
+		2086433C194D3F2C003A3A2C /* BSDSignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864339194D3F2C003A3A2C /* BSDSignViewController.xib */; };
+		2086433D194D3F2C003A3A2C /* BSDSignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20864339194D3F2C003A3A2C /* BSDSignViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +109,15 @@
 		20864320194D0FED003A3A2C /* BSDLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDLockViewController.xib; sourceTree = "<group>"; };
 		20864325194D12C4003A3A2C /* BSDTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDTransaction.h; sourceTree = "<group>"; };
 		20864326194D12C4003A3A2C /* BSDTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDTransaction.m; sourceTree = "<group>"; };
+		20864329194D20B8003A3A2C /* BSDUnlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDUnlockViewController.h; sourceTree = "<group>"; };
+		2086432A194D20B8003A3A2C /* BSDUnlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDUnlockViewController.m; sourceTree = "<group>"; };
+		2086432B194D20B8003A3A2C /* BSDUnlockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDUnlockViewController.xib; sourceTree = "<group>"; };
+		20864330194D2BCC003A3A2C /* BSDRedeemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDRedeemViewController.h; sourceTree = "<group>"; };
+		20864331194D2BCC003A3A2C /* BSDRedeemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDRedeemViewController.m; sourceTree = "<group>"; };
+		20864332194D2BCC003A3A2C /* BSDRedeemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDRedeemViewController.xib; sourceTree = "<group>"; };
+		20864337194D3F2C003A3A2C /* BSDSignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDSignViewController.h; sourceTree = "<group>"; };
+		20864338194D3F2C003A3A2C /* BSDSignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDSignViewController.m; sourceTree = "<group>"; };
+		20864339194D3F2C003A3A2C /* BSDSignViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSDSignViewController.xib; sourceTree = "<group>"; };
 		99E5CA36A0C3400F80871650 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D4B022D1051846009A3A32B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,12 +199,21 @@
 				20864310194D00EB003A3A2C /* BSDFriendViewController.h */,
 				20864311194D00EB003A3A2C /* BSDFriendViewController.m */,
 				20864312194D00EB003A3A2C /* BSDFriendViewController.xib */,
+				20864337194D3F2C003A3A2C /* BSDSignViewController.h */,
+				20864338194D3F2C003A3A2C /* BSDSignViewController.m */,
+				20864339194D3F2C003A3A2C /* BSDSignViewController.xib */,
 				20864317194D0E3A003A3A2C /* BSDSelectFriendsViewController.h */,
 				20864318194D0E3A003A3A2C /* BSDSelectFriendsViewController.m */,
 				20864319194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib */,
 				2086431E194D0FED003A3A2C /* BSDLockViewController.h */,
 				2086431F194D0FED003A3A2C /* BSDLockViewController.m */,
 				20864320194D0FED003A3A2C /* BSDLockViewController.xib */,
+				20864329194D20B8003A3A2C /* BSDUnlockViewController.h */,
+				2086432A194D20B8003A3A2C /* BSDUnlockViewController.m */,
+				2086432B194D20B8003A3A2C /* BSDUnlockViewController.xib */,
+				20864330194D2BCC003A3A2C /* BSDRedeemViewController.h */,
+				20864331194D2BCC003A3A2C /* BSDRedeemViewController.m */,
+				20864332194D2BCC003A3A2C /* BSDRedeemViewController.xib */,
 				208642DA194CD007003A3A2C /* Main_iPhone.storyboard */,
 				208642DD194CD007003A3A2C /* Main_iPad.storyboard */,
 				208642E3194CD007003A3A2C /* Images.xcassets */,
@@ -302,9 +332,12 @@
 			files = (
 				20864315194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */,
 				208642DF194CD007003A3A2C /* Main_iPad.storyboard in Resources */,
+				20864335194D2BCC003A3A2C /* BSDRedeemViewController.xib in Resources */,
+				2086432E194D20B8003A3A2C /* BSDUnlockViewController.xib in Resources */,
 				2086430E194CFF31003A3A2C /* BSDFriendsViewController.xib in Resources */,
 				20864323194D0FED003A3A2C /* BSDLockViewController.xib in Resources */,
 				2086431C194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */,
+				2086433C194D3F2C003A3A2C /* BSDSignViewController.xib in Resources */,
 				208642E4194CD007003A3A2C /* Images.xcassets in Resources */,
 				208642DC194CD007003A3A2C /* Main_iPhone.storyboard in Resources */,
 				208642D3194CD007003A3A2C /* InfoPlist.strings in Resources */,
@@ -317,7 +350,10 @@
 			files = (
 				20864316194D00EB003A3A2C /* BSDFriendViewController.xib in Resources */,
 				2086430F194CFF31003A3A2C /* BSDFriendsViewController.xib in Resources */,
+				2086432F194D20B8003A3A2C /* BSDUnlockViewController.xib in Resources */,
+				2086433D194D3F2C003A3A2C /* BSDSignViewController.xib in Resources */,
 				20864324194D0FED003A3A2C /* BSDLockViewController.xib in Resources */,
+				20864336194D2BCC003A3A2C /* BSDRedeemViewController.xib in Resources */,
 				2086431D194D0E3A003A3A2C /* BSDSelectFriendsViewController.xib in Resources */,
 				208642F5194CD007003A3A2C /* InfoPlist.strings in Resources */,
 			);
@@ -368,11 +404,14 @@
 				208642E2194CD007003A3A2C /* BSDViewController.m in Sources */,
 				20864303194CD7E5003A3A2C /* BSDStorage.m in Sources */,
 				20864327194D12C4003A3A2C /* BSDTransaction.m in Sources */,
+				2086432C194D20B8003A3A2C /* BSDUnlockViewController.m in Sources */,
 				2086431A194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */,
 				20864307194CD9B7003A3A2C /* BSDPerson.m in Sources */,
 				20864321194D0FED003A3A2C /* BSDLockViewController.m in Sources */,
 				208642D9194CD007003A3A2C /* BSDAppDelegate.m in Sources */,
+				20864333194D2BCC003A3A2C /* BSDRedeemViewController.m in Sources */,
 				208642D5194CD007003A3A2C /* main.m in Sources */,
+				2086433A194D3F2C003A3A2C /* BSDSignViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +423,10 @@
 				20864322194D0FED003A3A2C /* BSDLockViewController.m in Sources */,
 				20864328194D12C4003A3A2C /* BSDTransaction.m in Sources */,
 				2086430D194CFF31003A3A2C /* BSDFriendsViewController.m in Sources */,
+				2086433B194D3F2C003A3A2C /* BSDSignViewController.m in Sources */,
 				2086431B194D0E3A003A3A2C /* BSDSelectFriendsViewController.m in Sources */,
+				2086432D194D20B8003A3A2C /* BSDUnlockViewController.m in Sources */,
+				20864334194D2BCC003A3A2C /* BSDRedeemViewController.m in Sources */,
 				208642F7194CD007003A3A2C /* BlindSignatureDemoTests.m in Sources */,
 				20864304194CD7E5003A3A2C /* BSDStorage.m in Sources */,
 				20864308194CD9B7003A3A2C /* BSDPerson.m in Sources */,
