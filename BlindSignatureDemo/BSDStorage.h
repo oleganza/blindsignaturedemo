@@ -32,7 +32,11 @@
 // Random numbers for transactions are derived from here, per transaction.
 - (BTCKeychain*) transactionsKeychain;
 
+// Adds tx and saves it.
 - (BSDTransaction*) addTransactionForFriends:(NSArray*)friends minSignatures:(int)minSigs;
+
+// Loads a list of saved transactions.
+- (NSArray*) loadTransactions;
 
 
 @end

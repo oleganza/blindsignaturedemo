@@ -9,7 +9,8 @@
 #import "BSDLockViewController.h"
 
 @interface BSDLockViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
 @property (weak, nonatomic) IBOutlet UIImageView *qrcodeView;
 
 @end
@@ -45,7 +46,7 @@
     
     self.title = [NSString stringWithFormat:@"Transaction #%03d", tx.index];
     
-    self.addressLabel.text = tx.address ?: @"";
+    self.addressField.text = tx.address ?: @"";
     
     NSString* txaddr = [tx.address copy];
     

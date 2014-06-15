@@ -106,6 +106,13 @@
     return person;
 }
 
+- (NSArray*) loadTransactions
+{
+    id txsPlist = [[NSUserDefaults standardUserDefaults] objectForKey:@"transactions"];
+    NSArray* txs = [BSDTransaction txsFromPlist:txsPlist ?: @[]];
+    return txs;
+}
+
 - (BSDTransaction*) addTransactionForFriends:(NSArray*)friends minSignatures:(int)minSigs
 {
     if (friends.count == 0) return nil;
@@ -120,11 +127,11 @@
         }
     }
     
-    NSArray* txs = [[NSUserDefaults standardUserDefaults] objectForKey:@"txs"];
+    NSArray* txs = [self loadTransactions];
     
     BSDTransaction* tx = [[BSDTransaction alloc] init];
     
-    tx.index = txs.count;
+    tx.index = txs.count; // autoincrement index
     tx.label = @"";
     tx.friends = friends;
     
@@ -132,15 +139,33 @@
     // 1. one friend - normal pubkey address.
     // 2. many friends - multisig script wrapped in a P2SH address.
     
+    
     if (friends.count == 1)
     {
         // Normal address
+        BSDPerson* person = friends.firstObject;
+        
+        BTCBlindSignature* api = [[BTCBlindSignature alloc] initWithClientKeychain:[[BSDStorage sharedStorage] transactionsKeychain]
+                                                                 custodianKeychain:person.theirKeychain];
+        
+        BTCKey* pubkey = [api publicKeyAtIndex:tx.index];
+        
+        tx.address = pubkey.publicKeyAddress.base58String;
+        tx.scriptData = [pubkey.publicKey copy];
         
     }
     else
     {
-        // MULTISIG
+        // MULTISIG version.
+        
     }
+    
+    txs = [(txs ?: @[]) arrayByAddingObject:tx];
+    
+    id plist = [txs valueForKey:@"plist"];
+    [[NSUserDefaults standardUserDefaults] setObject:plist forKey:@"transactions"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     
     return tx;
 }

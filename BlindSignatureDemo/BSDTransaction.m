@@ -40,4 +40,16 @@
              };
 }
 
++ (NSArray*) txsFromPlist:(NSArray *)plist
+{
+    NSMutableArray* arr = [NSMutableArray array];
+    
+    for (id dict in plist)
+    {
+        [arr addObject:[[BSDTransaction alloc] initWithPlist:dict]];
+    }
+    
+    return arr;
+}
+
 @end

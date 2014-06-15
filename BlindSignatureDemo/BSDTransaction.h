@@ -20,4 +20,6 @@
 
 - (NSDictionary*) plist;
 
++ (NSArray*) txsFromPlist:(NSArray *)plist;
+
 @end
