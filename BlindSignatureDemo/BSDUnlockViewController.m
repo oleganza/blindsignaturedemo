@@ -91,9 +91,21 @@
     
     BSDTransaction* tx = _transactions[indexPath.row];
     
+    BTCTransactionOutput* txout = tx.txouts.firstObject;
+    NSUInteger confs = txout.confirmations;
+    
     cell.textLabel.text = tx.title;
     
     cell.detailTextLabel.text = (tx.balance > 0) ? [NSString stringWithFormat:@"%0.06f btc", ((double)tx.balance) / 100000000.0] : @"";
+    
+    if (confs == 0 && tx.balance > 0)
+    {
+        cell.detailTextLabel.textColor = [UIColor grayColor];
+    }
+    else if (tx.balance > 0)
+    {
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:0.055 green:0.473 blue:0.998 alpha:1.000];
+    }
     
     return cell;
 }
